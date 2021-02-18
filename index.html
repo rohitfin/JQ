@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JQ</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=0.1">
+        <meta name="description" content="">
+
+        <link rel="stylesheet" type="text/css" href="css-js/bootstrap.min.css" />
+        <script type="text/javascript" src="css-js/jquery.min.js"></script>
+        <script type="text/javascript" src="css-js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="script.js"></script>
+        <link rel="stylesheet" type="text/css" href="css-js/style.css" />
+    </head>
+    <body>
+        <div class="pop-area">
+            <div class="pop-content">
+                <div>
+                    <ul>
+                        <li><h4>POPUP</h4></li>
+                        <li><span id="hidePop">X</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+           
+            <div class="row">
+                <div class="col-md-4">
+                    <h3>Click Events</h3>
+                    <button class="btn btn-primary mb-2" id="hide">Hide</button>
+                    <button class="btn btn-dark mb-2" id="show">Show</button>
+                    <button class="btn btn-danger mb-2" id="stop">Stop</button>
+                    <button class="btn btn-success mb-2" id="hideShow">Hide and Show </button>
+                    <div id="hide-show" class="card card-body bg-light px-3 py-3 mt-4">
+                        <h3>Click Events</h3>
+                        <p>Hide and Show </p>
+                    </div>
+                    <br>
+                    <h4>Mouseenter and Mouseleave</h4>
+                    <div id="hover" class="card px-3 py-3 mt-4">
+                        <h2>Card</h2>
+                        <p>Mouseenter and Mouseout</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <h3>Keyboard Events</h3>
+                    <button id="keypress" class="btn btn-dark mb-2">Keypress</button>
+                    <button id="keydown" class="btn btn-success mb-2">Keydown</button>
+                    <button id="keyup" class="btn btn-warning mb-2">keyup</button>
+                    <div id="keyboardResult" class="card card-body mt-3">
+                        <h5>keyboard Results</h5>
+                        <textarea id="keyboard" rows="3" placeholder="keyboard Events" class="form-control"></textarea>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <h3>Form Events</h3>
+                    <p id="formResult"></p>
+
+                    <form id="form" action="" method="post" role="form" enctype="multipart/form-data">
+
+                        <div class="row form-group">
+                            <label for="name">Name:</label>
+                            <input id="name" name="name" type="text" placeholder="Name" class="form-control">
+                        </div>
+
+                        <div class="row form-group">
+                            <label for="email">Email</label>    
+                            <input id="email" name="email" type="emal" placeholder="Email" class="form-control">
+                        </div>
+
+                        <div class="row form-group">
+                            <label for="phone">Phone:</label>
+                            <input id="phone" name="phone" type="number" placeholder="Mobile NO." class="form-control">
+                        </div>
+                       
+
+                        <div class="row form-group">
+                            <div class="col">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="gender" id="male" value="Male">
+                                    <label class="form-check-label" for="male">
+                                      Male
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="gender" id="female" value="Female">
+                                    <label class="form-check-label" for="female">
+                                        Female
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="row form-group">
+                            <div class="col">
+                                <input class="form-check-input" type="checkbox" id="jquery" value="Jquery">
+                                <label class="form-check-label" for="jquery">JQuery</label>
+                                </div>
+                                <div class="col">
+                                <input class="form-check-input" type="checkbox" id="javascript" value="Javascript">
+                                <label class="form-check-label" for="javascript">Javascript</label>
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <div class="col">
+                                <label class="" for="education">Education</label>
+                                <select name="education" id="education">
+                                    <option value="">Please Select</option>
+                                    <option value="HSC">HSC</option>
+                                    <option value="SSC">SSC</option>
+                                    <option value="Graduation">Graduation</option>
+                                    <option value="Post Graduation">Post Graduation</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+
+
+                        <div class="row form-group">
+                            <div class="col">
+                                <input type="submit" Value="Send Message" id="submit" class="btn btn-dark">
+                            </div>
+                            <div class="col">
+                                <button id="dataButton" type="button" class="btn btn-dark">Show Data</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>    
+
+             <div class="row mt-5">
+                 <div class="col-md-6">
+                     <button id="fadeIn" class="btn btn-success">Fade In</button>
+                     <button id="fadeOut" class="btn btn-success">Fade Out</button>
+                       <button id="slideUP" class="btn btn-danger">Slide Up</button> 
+                       <button id="slideDown" class="btn btn-dark">Slide Down</button>
+
+                     <div id="fadeIn-content" class="alert alert-success mt-2" role="alert">
+                        <h4 class="alert-heading">Well done!</h4>
+                        <p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>
+                        <hr>
+                        <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
+                      </div>
+                 </div>
+                 <div class="col-md-6">
+                     <button id="fadeToggle" class="btn btn-warning">Fade Toggle</button>
+                     <button id="slideToggle" class="btn btn-primary">Slide Toggle</button>
+                     <div id="fadeToggle-content" class="alert alert-warning mt-2" role="alert">
+                        <h4 class="alert-heading">Well done!</h4>
+                        <p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>
+                        <hr>
+                        <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
+                      </div>
+                 </div>
+             </div>   
+
+             <div class="row mt-5 mb-4">
+                 <div class="col-md-6">
+                    <div class="card p-2 mb-2" id="addClass">
+                        <h4>Add Class</h4>
+                    </div>
+                    <button id="btn-toggleClass" class="btn btn-dark mb-2">Toggle Class</button>
+                    <button id="btn-addClass" class="btn btn-dark mb-2">Add Class</button>
+                    <button id="btn-removeClass" class="btn btn-dark mb-2">Remove Class</button>
+                    <button id="btn-customClass" class="btn btn-dark mb-2">Custom Toggle Class</button>
+                 </div>
+                 <div class="col-md-6">
+                     <h4>Adding Attribute </h4>
+                     <a href="#" id="addAttr">Click here!</a> </br>
+                     <button id="btn-add-attr"  class="btn btn-dark mt-2">Add Attribute</button>
+                 </div>
+             </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+             <div class="row mb-4 mt-2">
+                 <div class="col-md-12">
+                     <button class="btn btn-dark" id="JSON-btn">Show JSON Data</button>
+                 </div>
+                 <div class="col-md-5 mt-3">
+                     <div id="JSON-Result"></div>
+                 </div>
+                <div class="col-md-7 mt-3">
+                    <h4>One Way</h4>
+                     <div id="JSON-child-Result">
+                        <div id='res-card' class="card" style="display: none">
+                             <img id="img1" class="pok-img card-img-top p-2" src="" alt="Pok Name">
+                             <div class="card-body">
+                                <h5 id="name1" class="pok-title card-title"></h5>
+                                <ul id='list1' class="types">
+                                    
+                                </ul>
+                            </div>
+                        </div>
+                     </div>
+                 </div>
+             </div>
+
+             <div class="row mt-2 mb-4">
+                <div class="col-md-6">
+                    <h4>Second Way</h4>
+                   <div id="JSON-child-Result-2"></div>
+    
+    
+                   
+                </div>
+                <div class="col-md-6">
+                    <h4>Third Way</h4>
+                   <div id="JSON-child-Result-3"></div>
+                </div>
+            </div>
+
+
+        </div> <!-- container -->
+       
+
+        
+         <!-- second Way formate templates start -->
+        <div class="template" style="display: none">
+            <div class="JSON-child-Result-2">
+                <div class="card" >
+                    <img  class="pok-img card-img-top p-2" src="__imagURL__" alt="Pok Name">
+                    <div class="card-body">
+                       <h5 class="pok-title card-title">__name__</h5>
+                       <ul class="types">
+                           __list__
+                       </ul>
+                   </div>
+               </div>
+            </div>
+        </div>
+         <!-- second Way formate templates end -->
+
+
+    </body>
+</html>
