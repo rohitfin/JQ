@@ -1,0 +1,138 @@
+<!Doctype html>
+<html lang="en">
+    <head>
+        <title>JQuery</title>
+        <meta charset="UTF-8" />
+        <meta name="title" content="Jquery" />
+        <meta name="description" content="" />
+        <meta name="keyword" content="" />
+
+        <link rel="stylesheet" href="myStyle.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+        <style>
+            div { border: 1px solid #000; padding: 1rem; margin: 1rem; }
+        </style>
+    </head>
+    <body>
+
+        <input type="text" id="searchInput">
+
+        <div id="grandParent">
+            grandParent
+            <div id="parent">
+                Parent
+                <div id="child1">Child 1
+                    <div id="child1-1">Child1_1</div>
+                </div>
+                <div id="child2">Child 2</div>
+            </div>
+        </div>
+
+        <h2>Hellow</h2>
+
+        <div class="box-area">
+            <div class="box-one" id="box-one">
+                <h3>Name</h3>
+                <button class="box-btn-1" onclick="showMessage()">Click</button>
+            </div>
+            <div class="box-two" id="box-two">
+                <h3>Box two</h3>
+                <button class="box-btn-2">Toggle</button>
+            </div>
+        </div>
+
+        <div class="form-area">
+            <form  method="POST" enctype="multipart/form-data">
+        
+                <!-- Text Input -->
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                <br><br>
+        
+                <!-- Email Input -->
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                <br><br>
+        
+                <!-- Password Input -->
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                <br><br>
+        
+                <!-- Phone Input -->
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" placeholder="123-456-7890">
+                <br><br>
+        
+                <!-- Date Input -->
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob">
+                <br><br>
+        
+                <!-- Radio Buttons -->
+                <label>Gender:</label><br>
+                <input type="radio" id="male" name="gender" value="male">
+                <label for="male">Male</label>
+                
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">Female</label>
+                
+                <input type="radio" id="other" name="gender" value="other">
+                <label for="other">Other</label>
+                <br><br>
+        
+                <!-- Dropdown Select -->
+                <label for="country">Country:</label>
+                <select id="country" name="country">
+                    <option value="">Select a country</option>
+                    <option value="us">United States</option>
+                    <option value="uk">United Kingdom</option>
+                    <option value="india">India</option>
+                </select>
+                <br><br>
+        
+                <!-- Textarea -->
+                <label for="message">Message:</label><br>
+                <textarea id="message" name="message" rows="4" cols="40" placeholder="Write your message here..."></textarea>
+                <br><br>
+        
+                <!-- File Upload -->
+                <label for="file">Upload a File:</label>
+                <input type="file" id="file" name="file">
+                <br><br>
+        
+                <!-- Checkbox -->
+                <label>
+                    <input type="checkbox" name="subscribe" value="yes">
+                    Subscribe to newsletter
+                </label>
+                <br><br>
+        
+                <!-- Hidden Input -->
+                <input type="hidden" name="user_id" value="12345" id="userId">
+        
+                <!-- Reset and Submit Buttons -->
+                <input type="reset" value="Reset">
+                <input type="submit" value="Submit">
+        
+            </form>
+            <div>
+                <button>Fetch Data</button>
+                <div class="list">
+                    <div class="displayPokemon"></div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+        <!-- <script type="module" src="myScript.js"></script> -->
+        <script src="dsa2.js"></script>
+        <script type="module" src="javascript.js"></script>
+    <body>
+</html>
