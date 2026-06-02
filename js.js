@@ -1,6 +1,12 @@
 console.log(name);
 var name = "Jai Ram Ji";
 
+
+/*
+How many types of time complexity?
+O(n) time complexity
+*/
+
 var containsDuplicate = function (nums) {
   if (!Array.isArray(nums)) {
     throw new Error("Input must be an array");
@@ -128,14 +134,14 @@ var topKFrequent = function (nums, k) {
 // console.log(topKFrequent([1,1,1,2,2,3], 2));
 // console.log(topKFrequent([1], 1));
 
-const encode = function(strs) {
-    let result = "";
+const encode = function (strs) {
+  let result = "";
 
-    for (const word of strs) {
-        result += word.length + "#" + word;
-    }
+  for (const word of strs) {
+    result += word.length + "#" + word;
+  }
 
-    return result;
+  return result;
 };
 // console.log(
 //     encode(["hello", "world"])
@@ -147,7 +153,10 @@ const decode = function (str) {
     let hashPosition = txt.indexOf("#");
     let digit = txt.slice(0, parseInt(hashPosition));
 
-    let word = txt.split("").splice(hashPosition+1, digit).join("");
+    let word = txt
+      .split("")
+      .splice(hashPosition + 1, digit)
+      .join("");
     if (word.length != digit) throw new Error("Not proper");
     output.push(word);
     let leftWord = txt.split(digit + "#" + word).join("");
@@ -159,38 +168,77 @@ const decode = function (str) {
 
   return output;
 };
-const decode2 = function(str) {
-    const result = [];
-    let i = 0;
-    while (i < str.length) {
-        let j = i;
-        while (str[j] !== "#") {
-            j++;
-        }
-        const len = parseInt(str.slice(i, j));
-        const word = str.slice(j + 1, j + 1 + len);
-        result.push(word);
-        i = j + 1 + len;
+const decode2 = function (str) {
+  const result = [];
+  let i = 0;
+  while (i < str.length) {
+    let j = i;
+    while (str[j] !== "#") {
+      j++;
     }
-    return result;
+    const len = parseInt(str.slice(i, j));
+    const word = str.slice(j + 1, j + 1 + len);
+    result.push(word);
+    i = j + 1 + len;
+  }
+  return result;
 };
-const decode3 = function(str) {
-    const output = [];
-    const helper = (txt) => {
-        if (!txt) return;
-        const hashIndex = txt.indexOf("#");
-        const len = parseInt(txt.slice(0, hashIndex));
-        const word = txt.slice(
-            hashIndex + 1,
-            hashIndex + 1 + len
-        );
-        output.push(word);
-        const remaining = txt.slice(
-            hashIndex + 1 + len
-        );
-        helper(remaining);
-    };
-    helper(str);
+const decode3 = function (str) {
+  const output = [];
+  const helper = (txt) => {
+    if (!txt) return;
+    const hashIndex = txt.indexOf("#");
+    const len = parseInt(txt.slice(0, hashIndex));
+    const word = txt.slice(hashIndex + 1, hashIndex + 1 + len);
+    output.push(word);
+    const remaining = txt.slice(hashIndex + 1 + len);
+    helper(remaining);
+  };
+  helper(str);
+  return output;
+};
+// console.log(decode2("10#worldsssss6#hellow5#world"));
+
+/*
+Given an array of integers, return a new array where each element at index i is the product of all elements in the array except nums[i].
+Example:
+Input: [1, 2, 3, 4]
+Output: [24, 12, 8, 6]
+*/
+
+var productExceptSelf2 = function (nums) {
+  let output = [];
+  for (let j = 0; j < nums.length; j++) {
+    let val = 1;
+    for (let i = 0; i < nums.length; i++) {
+      if (j !== i) {
+        val *= nums[i];
+      }
+    }
+    output.push(val);
+    val = 1;
+  }
+  return output;
+};
+
+var productExceptSelf = function(nums) {
+    const output = new Array(nums.length);
+
+    output[0] = 1;
+
+    // Prefix products
+    for (let i = 1; i < nums.length; i++) {
+        output[i] = output[i - 1] * nums[i - 1];
+    }
+
+    // Suffix products
+    let right = 1;
+
+    for (let i = nums.length - 1; i >= 0; i--) {
+        output[i] *= right;
+        right *= nums[i];
+    }
+
     return output;
 };
-console.log(decode2("10#worldsssss6#hellow5#world"));
+// console.log(productExceptSelf([1, 2, 3, 4, 2]));
